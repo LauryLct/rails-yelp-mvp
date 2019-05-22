@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div>
+
 <p>
   <strong>Name:</strong>
   <%= @restaurant.name %>
@@ -20,6 +22,7 @@
   <%= @restaurant.category %>
 </p>
 
+</div>
 <% @reviews.each do |review| %>
 <div class="review border rounded m-3">
 <p> rating : <%= review.rating %></p>
