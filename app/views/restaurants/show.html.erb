@@ -20,5 +20,13 @@
   <%= @restaurant.category %>
 </p>
 
+<% @reviews.each do |review| %>
+<div class="review border rounded m-3">
+<p> rating : <%= review.rating %></p>
+<p> content : <%= review.content %> </p>
+</div>
+<% end %>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<%= link_to 'Back', restaurants_path %> |
+<%= link_to 'Put a review', new_restaurant_review_path(@restaurant)  %>
